@@ -4,23 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="servlet框架导入">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="mybatis框架整合">
+      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/util/SqlSessionUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/hello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/hello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,12 +21,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Tag Library Descriptor" />
-        <option value="Class" />
         <option value="JUnit3 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -80,7 +76,7 @@
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -95,8 +91,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Code\Java\JavaWeb_endOfTeam\src\main\resources\yokiware\mapper" />
-      <recent name="D:\Code\Java\JavaWeb_endOfTeam\src\main\resources\yokiware.mapper" />
       <recent name="D:\Code\Java\JavaWeb_endOfTeam\src\main\java\yokiware\mapper" />
+      <recent name="D:\Code\Java\JavaWeb_endOfTeam\src\main\resources\yokiware.mapper" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
@@ -163,7 +159,10 @@
       <workItem from="1674917057999" duration="44000" />
       <workItem from="1675215940112" duration="2713000" />
       <workItem from="1675304444123" duration="7349000" />
-      <workItem from="1675477393003" duration="8659000" />
+      <workItem from="1675477393003" duration="11139000" />
+      <workItem from="1675567817853" duration="3357000" />
+      <workItem from="1675573277323" duration="1080000" />
+      <workItem from="1675574375871" duration="545000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -179,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675323970905</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mybatis框架整合">
+      <created>1675510355748</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675510355748</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +205,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="项目框架" />
     <MESSAGE value="servlet框架导入" />
-    <option name="LAST_COMMIT_MESSAGE" value="servlet框架导入" />
+    <MESSAGE value="mybatis框架整合" />
+    <option name="LAST_COMMIT_MESSAGE" value="mybatis框架整合" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

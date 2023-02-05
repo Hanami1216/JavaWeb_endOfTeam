@@ -5,6 +5,8 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 import yokiware.entity.User;
 import yokiware.mapper.UserMapper;
+import yokiware.service.UserService;
+import yokiware.service.impl.UserServiceImpl;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,8 +17,8 @@ public class UserServiceTest {
 
     @Test
     public void userGet() throws IOException {
-        System.out.println("set");
-        //1. 加载mybatis的核心配置文件，获取 SqlSessionFactory
+
+/*        //1. 加载mybatis的核心配置文件，获取 SqlSessionFactory
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
@@ -30,6 +32,12 @@ public class UserServiceTest {
 
         System.out.println(users);
         //4. 释放资源
-        sqlSession.close();
+        sqlSession.close();*/
+
+        UserService userService = new UserServiceImpl();
+        List<User> users = userService.getAll();
+        System.out.println(users);
     }
+
+
 }

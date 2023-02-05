@@ -4,6 +4,7 @@ package yokiware.service;
 import yokiware.entity.User;
 import yokiware.mapper.UserMapper;
 
+import java.io.IOException;
 import java.util.List;
 
 public interface UserService {
@@ -11,7 +12,7 @@ public interface UserService {
     /**
      *获取所有用户信息
      */
-    List<User> getAll();
+    List<User> getAll() throws IOException;
 
     /**
      * 通过Id获取用户信息
