@@ -2,7 +2,6 @@ package yokiware.service;
 
 
 import yokiware.entity.User;
-import yokiware.mapper.UserMapper;
 
 import java.io.IOException;
 import java.util.List;
@@ -17,7 +16,7 @@ public interface UserService {
     /**
      * 通过Id获取用户信息
      */
-    User getById();
+    User getById(int id);
 
     /**
      * 添加用户
@@ -27,9 +26,10 @@ public interface UserService {
 
     /**
      * 删除用户通过Id字段
-     * @param user
+     *
+     * @param
      */
-    boolean delById(User user);
+    boolean delById(int id);
 
     /**
      * 修改用户信息

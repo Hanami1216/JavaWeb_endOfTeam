@@ -1,26 +1,22 @@
 package yokiware.service.impl;
 
-
-import org.apache.ibatis.session.SqlSession;
 import yokiware.entity.User;
-import yokiware.mapper.UserMapper;
 import yokiware.service.UserService;
-import yokiware.util.SqlSessionUtils;
 
 import java.io.IOException;
 import java.util.List;
 
-public class UserServiceImpl implements UserService {
-
-    SqlSession sqlSession = SqlSessionUtils.getCurrentSqlSession();
-
+/**
+ * @Description :
+ * @Author : YokeWare
+ * @Date: 2023/2/5  13:49
+ */
+public class usr implements UserService {
     @Override
     public List<User> getAll() throws IOException {
-        //获取UserMapper接口的代理对象
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-
-        return userMapper.findAll();
+        return null;
     }
+
 
     @Override
     public User getById(int id) {
@@ -41,5 +37,4 @@ public class UserServiceImpl implements UserService {
     public boolean modifyById(User user) {
         return false;
     }
-
 }

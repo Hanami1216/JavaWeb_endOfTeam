@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serial;
 import java.io.Serializable;
 
 @Data
@@ -12,6 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 public class Result implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 8413782072084810966L;
     /**
      * 请使用本类的静态变量，SUCCESS,ERROR,WARN

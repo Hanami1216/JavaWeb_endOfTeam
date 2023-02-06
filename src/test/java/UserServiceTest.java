@@ -1,15 +1,10 @@
-import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 import yokiware.entity.User;
-import yokiware.mapper.UserMapper;
 import yokiware.service.UserService;
 import yokiware.service.impl.UserServiceImpl;
+import yokiware.service.impl.usr;
 
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 
 
@@ -37,6 +32,11 @@ public class UserServiceTest {
         UserService userService = new UserServiceImpl();
         List<User> users = userService.getAll();
         System.out.println(users);
+
+
+        UserService u = new usr();
+        List<User> users1 = u.getAll();
+        System.out.println(users1);
     }
 
 
