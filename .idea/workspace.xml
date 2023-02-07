@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="项目配置导入git仓库">
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/usr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/util/JSONUtil.java" afterDir="false" />
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="JSONObject导入">
+      <change afterPath="$PROJECT_DIR$/src/test/java/JSONTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,6 +99,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Maven.JavaWeb_endOfTeam [tomcat7:run]">
+    <configuration name="JSONTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JSONTest" />
+      <module name="JavaWeb_endOfTeam" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceTest.userGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JavaWeb_endOfTeam" />
       <option name="PACKAGE_NAME" value="" />
@@ -143,6 +143,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.JSONTest" />
         <item itemvalue="JUnit.UserServiceTest.userGet" />
       </list>
     </recent_temporary>
@@ -177,7 +178,11 @@
       <workItem from="1675594669819" duration="119000" />
       <workItem from="1675595319588" duration="944000" />
       <workItem from="1675598596599" duration="5313000" />
-      <workItem from="1675686101215" duration="1228000" />
+      <workItem from="1675686101215" duration="2315000" />
+      <workItem from="1675729559695" duration="22000" />
+      <workItem from="1675729591577" duration="2402000" />
+      <workItem from="1675736591900" duration="4000" />
+      <workItem from="1675736632405" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -214,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675575731953</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="JSONObject导入">
+      <created>1675688235165</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675688235165</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,7 +250,8 @@
     <MESSAGE value="mybatis框架整合" />
     <MESSAGE value="mybatis工具类完成，用户接口getAll()方法完成" />
     <MESSAGE value="项目配置导入git仓库" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目配置导入git仓库" />
+    <MESSAGE value="JSONObject导入" />
+    <option name="LAST_COMMIT_MESSAGE" value="JSONObject导入" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

@@ -1,5 +1,6 @@
 package yokiware.mapper;
 
+import org.apache.ibatis.annotations.Param;
 import yokiware.entity.User;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public interface UserMapper {
     /**
      * 通过Id获取用户信息
      */
-    User getById(int id);
+    User getById(@Param("id") int id);
 
     /**
      * 添加用户

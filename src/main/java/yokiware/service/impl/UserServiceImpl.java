@@ -1,7 +1,6 @@
 package yokiware.service.impl;
 
 
-import org.apache.ibatis.session.SqlSession;
 import yokiware.entity.User;
 import yokiware.mapper.UserMapper;
 import yokiware.service.UserService;
@@ -11,20 +10,17 @@ import java.io.IOException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
-
-    SqlSession sqlSession = SqlSessionUtils.getCurrentSqlSession();
+    //获取UserMapper接口的代理对象
+    UserMapper userMapper = SqlSessionUtils.getCurrentSqlSession().getMapper(UserMapper.class);
 
     @Override
     public List<User> getAll() throws IOException {
-        //获取UserMapper接口的代理对象
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-
         return userMapper.findAll();
     }
 
     @Override
     public User getById(int id) {
-        return null;
+        return userMapper.getById(id);
     }
 
     @Override
