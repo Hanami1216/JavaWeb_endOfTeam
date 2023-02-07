@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
+
     //获取UserMapper接口的代理对象
     UserMapper userMapper = SqlSessionUtils.getCurrentSqlSession().getMapper(UserMapper.class);
 
