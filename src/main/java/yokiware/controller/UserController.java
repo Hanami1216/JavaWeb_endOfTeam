@@ -29,8 +29,8 @@ public class UserController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //resp.getWriter().println("输出一个东西回前端");
 //        userList = userService.getAll();
-        user = userService.getById(22);
-        JSONUtil.responseOutWithJson(resp, user);
+
+        JSONUtil.responseOutWithJson(resp, new Result(1, "成功", userService.getById(22)));
     }
 
     @Override

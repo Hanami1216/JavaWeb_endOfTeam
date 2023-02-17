@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="JSONObject导入">
-      <change afterPath="$PROJECT_DIR$/src/test/java/JSONTest.java" afterDir="false" />
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="删除hello初始servlet">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +179,9 @@
       <workItem from="1675729559695" duration="22000" />
       <workItem from="1675729591577" duration="2402000" />
       <workItem from="1675736591900" duration="4000" />
-      <workItem from="1675736632405" duration="317000" />
+      <workItem from="1675736632405" duration="1970000" />
+      <workItem from="1676302274261" duration="27000" />
+      <workItem from="1676603500565" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -226,7 +225,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675688235165</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="c层模板完成，返回封装的json,但是不能返回数组json（待解决）">
+      <created>1675737071533</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675737071533</updated>
+    </task>
+    <task id="LOCAL-00008" summary="删除hello初始servlet">
+      <created>1675737359291</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675737359291</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,7 +264,9 @@
     <MESSAGE value="mybatis工具类完成，用户接口getAll()方法完成" />
     <MESSAGE value="项目配置导入git仓库" />
     <MESSAGE value="JSONObject导入" />
-    <option name="LAST_COMMIT_MESSAGE" value="JSONObject导入" />
+    <MESSAGE value="c层模板完成，返回封装的json,但是不能返回数组json（待解决）" />
+    <MESSAGE value="删除hello初始servlet" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除hello初始servlet" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
