@@ -1,5 +1,6 @@
 package yokiware.controller;
 
+import org.apache.log4j.Logger;
 import yokiware.entity.User;
 import yokiware.service.UserService;
 import yokiware.service.impl.UserServiceImpl;
@@ -20,17 +21,19 @@ import java.util.List;
  */
 @WebServlet("/user")
 public class UserController extends HttpServlet {
-
+    private static final Logger logger = Logger.getLogger(UserController.class);
     private final UserService userService = new UserServiceImpl();
     private List<User> userList;
     private User user;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        //resp.getWriter().println("输出一个东西回前端");
-//        userList = userService.getAll();
+        user = userService.getById(Integer.parseInt(req.getParameter("id")));
+        if (user != null) {
+            JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功", user));
+        } else
+            JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败", null));
 
-        JSONUtil.responseOutWithJson(resp, new Result(1, "成功", userService.getById(22)));
     }
 
     @Override

@@ -2,7 +2,6 @@ import org.junit.Test;
 import yokiware.entity.User;
 import yokiware.service.UserService;
 import yokiware.service.impl.UserServiceImpl;
-import yokiware.service.impl.usr;
 
 import java.io.IOException;
 import java.util.List;
@@ -34,9 +33,6 @@ public class UserServiceTest {
         System.out.println(users);
 
 
-        UserService u = new usr();
-        List<User> users1 = u.getAll();
-        System.out.println(users1);
     }
 
 
