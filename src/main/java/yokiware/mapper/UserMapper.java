@@ -29,7 +29,7 @@ public interface UserMapper {
      * @param id
      * @return
      */
-    boolean delById(@Param("id") Integer id);
+    boolean delById(@Param("id") int id);
 
     /**
      * 修改用户信息

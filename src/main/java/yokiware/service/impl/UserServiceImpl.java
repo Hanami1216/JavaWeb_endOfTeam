@@ -1,6 +1,8 @@
 package yokiware.service.impl;
 
 
+import org.apache.ibatis.session.SqlSession;
+import org.apache.log4j.Logger;
 import yokiware.entity.User;
 import yokiware.mapper.UserMapper;
 import yokiware.service.UserService;
@@ -11,8 +13,10 @@ import java.util.List;
 
 public class UserServiceImpl implements UserService {
 
+    private static final Logger logger = Logger.getLogger(UserServiceImpl.class);
     //获取UserMapper接口的代理对象
-    UserMapper userMapper = SqlSessionUtils.getCurrentSqlSession().getMapper(UserMapper.class);
+    SqlSession sqlSession = SqlSessionUtils.getCurrentSqlSession();
+    UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 
     @Override
     public List<User> getAll() throws IOException {
@@ -26,7 +30,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean addUser(User user) {
-        return false;
+        if (userMapper.addUser(user)) {
+            sqlSession.commit();
+            return true;
+        } else return false;
     }
 
     @Override
@@ -36,7 +43,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean modifyById(User user) {
-        return false;
+        return userMapper.modifyById(user);
     }
 
 }

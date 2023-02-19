@@ -35,5 +35,24 @@ public class UserServiceTest {
 
     }
 
+    @Test
+    public void userDelete() {
+        UserService userService = new UserServiceImpl();
+        System.out.println(userService.delById(10));
+    }
 
+    @Test
+    public void userAdd() throws IOException {
+        UserService userService = new UserServiceImpl();
+        User user = new User();
+        user.setAddress("花都");
+        user.setAge("12");
+        user.setName(">");
+        user.setPower(1);
+        user.setSex("男");
+        user.setPassword("12343");
+        System.out.println(userService.addUser(user));
+
+
+    }
 }
