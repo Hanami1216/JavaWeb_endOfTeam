@@ -21,19 +21,20 @@ public interface UserMapper {
      *
      * @param user
      */
-    void addUser(User user);
+    boolean addUser(User user);
 
     /**
      * 删除用户通过Id字段
      *
-     * @param user
+     * @param id
+     * @return
      */
-    void delById(int id);
+    boolean delById(@Param("id") Integer id);
 
     /**
      * 修改用户信息
      *
      * @param user
      */
-    void modifyById(User user);
+    boolean modifyById(User user);
 }

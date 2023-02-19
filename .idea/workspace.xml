@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/Code.java" afterDir="false" />
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="User GET请求完善">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +67,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/Java/WMS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -183,7 +186,10 @@
       <workItem from="1676302274261" duration="27000" />
       <workItem from="1676603500565" duration="400000" />
       <workItem from="1676707484037" duration="2532000" />
-      <workItem from="1676729698839" duration="1294000" />
+      <workItem from="1676729698839" duration="5362000" />
+      <workItem from="1676773865583" duration="266000" />
+      <workItem from="1676774190096" duration="117000" />
+      <workItem from="1676776967363" duration="623000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -241,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675737359291</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="User GET请求完善">
+      <created>1676731166071</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676731166071</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,7 +281,8 @@
     <MESSAGE value="JSONObject导入" />
     <MESSAGE value="c层模板完成，返回封装的json,但是不能返回数组json（待解决）" />
     <MESSAGE value="删除hello初始servlet" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除hello初始servlet" />
+    <MESSAGE value="User GET请求完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="User GET请求完善" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

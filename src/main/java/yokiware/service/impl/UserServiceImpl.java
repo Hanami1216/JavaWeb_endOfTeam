@@ -31,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean delById(int id) {
-        return false;
+        return userMapper.delById(id);
     }
 
     @Override
