@@ -38,12 +38,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean delById(int id) {
-        return userMapper.delById(id);
+        if (userMapper.delById(id)) {
+            sqlSession.commit();
+            return true;
+        } else return false;
     }
 
     @Override
     public boolean modifyById(User user) {
-        return userMapper.modifyById(user);
+        if (userMapper.modifyById(user)) {
+            sqlSession.commit();
+            return true;
+        } else return false;
     }
 
 }
