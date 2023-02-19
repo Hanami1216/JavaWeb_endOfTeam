@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="解决提交事务问题 完善">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/UserMapper.xml" afterDir="false" />
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="UserMapper.xml完善update方法">
+      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/AuditController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/entity/Audit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/mapper/AuditMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/AuditService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/AuditServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/AuditMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,33 +63,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ResultTool:SCAN_SERVICE_WITH_LIB": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit3",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3": "junit.framework.TestCase",
-    "last_opened_file_path": "D:/Code/Java/WMS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ResultTool:SCAN_SERVICE_WITH_LIB&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit3&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3&quot;: &quot;junit.framework.TestCase&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Code/Java/JavaWeb_endOfTeam/src/main/resources/yokiware/mapper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\Java\JavaWeb_endOfTeam\src\main\resources\yokiware\mapper" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="junit.framework.TestCase" />
     </key>
@@ -93,8 +105,15 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="yokiware.service.impl" />
+      <recent name="yokiware.service" />
+      <recent name="yokiware.controller" />
+      <recent name="yokiware.entity" />
+      <recent name="yokiware.mapper" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest.userAdd">
+  <component name="RunManager" selected="Maven.JavaWeb_endOfTeam [tomcat7:run]">
     <configuration name="JSONTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JSONTest" />
       <module name="JavaWeb_endOfTeam" />
@@ -208,7 +227,8 @@
       <workItem from="1676773865583" duration="266000" />
       <workItem from="1676774190096" duration="117000" />
       <workItem from="1676776967363" duration="3742000" />
-      <workItem from="1676791445181" duration="4993000" />
+      <workItem from="1676791445181" duration="9996000" />
+      <workItem from="1676818035941" duration="640000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -301,7 +321,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676796407737</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="UserMapper.xml完善update方法">
+      <created>1676796597499</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676796597499</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +358,8 @@
     <MESSAGE value="User GET请求完善" />
     <MESSAGE value="解决提交事务问题" />
     <MESSAGE value="解决提交事务问题 完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="解决提交事务问题 完善" />
+    <MESSAGE value="UserMapper.xml完善update方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="UserMapper.xml完善update方法" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

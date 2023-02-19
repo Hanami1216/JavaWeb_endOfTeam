@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="yokiware.mapper.AuditMapper">
+    <insert id="addAudit">
+        insert into audit(name, sex, age, address, power, password, state)
+        values (#{name}, #{sex}, #{age}, #{address}, #{power}, #{password}, #{state})
+    </insert>
+    <update id="modifyById">
+        update
+        audit
+        <set>
+            <if test="name!= null and name != ''">
+                name =#{name}
+            </if>
+            <if test="sex!= null and sex != ''">
+                sex =#{sex}
+            </if>
+            <if test="age!= null and age != ''">
+                age =#{age}
+            </if>
+            <if test="address!= null and address != ''">
+                address =#{address}
+            </if>
+            <if test="power!= null and power != ''">
+                power =#{power}
+            </if>
+            <if test="password!= null and password != ''">
+                password =#{password}
+            </if>
+        </set>
+        where id =#{id}
+    </update>
+    <delete id="delById">
+        delete
+        from audit
+        where id = #{id};
+    </delete>
+
+
+    <select id="findAll" resultType="yokiware.entity.Audit">
+        select *
+        from audit;
+    </select>
+    <select id="getById" resultType="yokiware.entity.Audit">
+        select *
+        from audit
+        where id = #{id};
+    </select>
+
+
+</mapper>

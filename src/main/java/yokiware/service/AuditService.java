@@ -2,12 +2,11 @@ package yokiware.service;
 
 
 import yokiware.entity.Audit;
-import yokiware.entity.User;
 
 import java.io.IOException;
 import java.util.List;
 
-public interface UserService {
+public interface AuditService {
 
     /**
      * 获取所有用户信息
@@ -17,13 +16,14 @@ public interface UserService {
     /**
      * 通过Id获取用户信息
      */
-    User getById(int id);
+    Audit getById(int id);
 
     /**
      * 添加用户
-     * @param user
+     *
+     * @param audit
      */
-    boolean addUser(User user);
+    boolean addAudit(Audit audit);
 
     /**
      * 删除用户通过Id字段
@@ -34,8 +34,9 @@ public interface UserService {
 
     /**
      * 修改用户信息
-     * @param user
+     *
+     * @param audit
      */
-    boolean modifyById(User user);
+    boolean modifyById(Audit audit);
 
 }
