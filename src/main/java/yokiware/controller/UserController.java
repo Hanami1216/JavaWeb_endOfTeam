@@ -70,9 +70,9 @@ public class UserController extends HttpServlet {
         user = new Gson().fromJson(bufferedReader, User.class);
         if (user != null) {
             userService.addUser(user);
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "ADD成功,返回null", null));
         } else
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "ADD失败，返回null", null));
         user = null;
     }
 

@@ -1,5 +1,6 @@
 package yokiware.controller;
 
+import com.google.gson.Gson;
 import org.apache.log4j.Logger;
 import yokiware.entity.Audit;
 import yokiware.service.AuditService;
@@ -11,6 +12,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.List;
 
@@ -27,7 +29,7 @@ public class AuditController extends HttpServlet {
     private Audit audit;
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         String requestURI = req.getRequestURI();
         String[] uriParts = requestURI.split("/");
         // 获取所有用户信息
@@ -49,16 +51,32 @@ public class AuditController extends HttpServlet {
             } else
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", null));
         }
+        auditList = null;
+        audit = null;
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        BufferedReader bufferedReader = req.getReader();
+        audit = new Gson().fromJson(bufferedReader, Audit.class);
+        if (audit != null) {
+            auditService.addAudit(audit);
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "ADD成功,返回null", null));
+        } else
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "ADD失败，返回null", null));
+        audit = null;
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        BufferedReader bufferedReader = req.getReader();
+        audit = new Gson().fromJson(bufferedReader, Audit.class);
+        if (audit != null) {
+            auditService.addAudit(audit);
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", null));
+        } else
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", null));
+        audit = null;
     }
 
     @Override
@@ -66,5 +84,6 @@ public class AuditController extends HttpServlet {
         if (auditService.delById(Integer.parseInt(req.getParameter("id")))) {
             JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_OK, "DELETE成功", null));
         } else JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_ERR, "DELETE失败", null));
+
     }
 }

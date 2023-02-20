@@ -10,22 +10,22 @@
         audit
         <set>
             <if test="name!= null and name != ''">
-                name =#{name}
+                name =#{name},
             </if>
             <if test="sex!= null and sex != ''">
-                sex =#{sex}
+                sex =#{sex},
             </if>
             <if test="age!= null and age != ''">
-                age =#{age}
+                age =#{age},
             </if>
             <if test="address!= null and address != ''">
-                address =#{address}
+                address =#{address},
             </if>
             <if test="power!= null and power != ''">
-                power =#{power}
+                power =#{power},
             </if>
             <if test="password!= null and password != ''">
-                password =#{password}
+                password =#{password},
             </if>
         </set>
         where id =#{id}
