@@ -1,6 +1,6 @@
 package yokiware.controller;
 
-import org.apache.log4j.Logger;
+import com.google.gson.Gson;
 import yokiware.entity.User;
 import yokiware.service.UserService;
 import yokiware.service.impl.UserServiceImpl;
@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
@@ -22,14 +23,13 @@ import java.util.List;
  */
 @WebServlet("/user/*")
 public class UserController extends HttpServlet {
-    private static final Logger logger = Logger.getLogger(UserController.class);
+
     private final UserService userService = new UserServiceImpl();
     private List<User> userList;
     private User user;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
 
 
         String requestURI = req.getRequestURI();
@@ -39,13 +39,13 @@ public class UserController extends HttpServlet {
         // 获取所有用户信息
         if (uriParts.length == 3 || (uriParts.length == 4 && uriParts[3].isEmpty())) {
             userList = userService.getAll();
-//            String usersJson = new Gson().toJson(users); // 将 Java 对象转换成 JSON 格式的字符串
-//            response.setContentType("application/json"); // 将响应的内容类型设置为 JSON
-//            response.getWriter().write(usersJson);
             if (userList != null) {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回所有用户信息", userList));
-            } else
+            } else {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", null));
+
+            }
+
         }
         // 获取单个用户信息
         else if (uriParts.length == 4) {
@@ -55,19 +55,37 @@ public class UserController extends HttpServlet {
             user = userService.getById(userId);
             if (user != null) {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回单个用户信息", user));
-            } else
+            } else {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", null));
+            }
         }
+        // 恢复null
+        user = null;
+        userList = null;
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        BufferedReader bufferedReader = req.getReader();
+        user = new Gson().fromJson(bufferedReader, User.class);
+        if (user != null) {
+            userService.addUser(user);
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", null));
+        } else
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", null));
+        user = null;
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        BufferedReader bufferedReader = req.getReader();
+        user = new Gson().fromJson(bufferedReader, User.class);
+        if (user != null) {
+            userService.modifyById(user);
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", null));
+        } else
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", null));
+        user = null;
     }
 
     @Override
@@ -76,4 +94,5 @@ public class UserController extends HttpServlet {
             JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_OK, "DELETE成功", null));
         } else JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_ERR, "DELETE失败", null));
     }
+
 }

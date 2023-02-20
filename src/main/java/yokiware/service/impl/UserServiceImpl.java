@@ -3,7 +3,6 @@ package yokiware.service.impl;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.log4j.Logger;
-import yokiware.entity.Audit;
 import yokiware.entity.User;
 import yokiware.mapper.UserMapper;
 import yokiware.service.UserService;
@@ -20,7 +19,7 @@ public class UserServiceImpl implements UserService {
     UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
 
     @Override
-    public List<Audit> getAll() throws IOException {
+    public List<User> getAll() throws IOException {
         return userMapper.findAll();
     }
 

@@ -1,7 +1,6 @@
 package yokiware.service;
 
 
-import yokiware.entity.Audit;
 import yokiware.entity.User;
 
 import java.io.IOException;
@@ -12,7 +11,7 @@ public interface UserService {
     /**
      * 获取所有用户信息
      */
-    List<Audit> getAll() throws IOException;
+    List<User> getAll() throws IOException;
 
     /**
      * 通过Id获取用户信息
