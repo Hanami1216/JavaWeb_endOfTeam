@@ -2,7 +2,6 @@ package yokiware.service.impl;
 
 
 import org.apache.ibatis.session.SqlSession;
-import org.apache.log4j.Logger;
 import yokiware.entity.Audit;
 import yokiware.mapper.AuditMapper;
 import yokiware.service.AuditService;
@@ -12,7 +11,6 @@ import java.util.List;
 
 public class AuditServiceImpl implements AuditService {
 
-    private static final Logger logger = Logger.getLogger(AuditServiceImpl.class);
     //获取UserMapper接口的代理对象
     SqlSession sqlSession = SqlSessionUtils.getCurrentSqlSession();
     AuditMapper auditMapper = sqlSession.getMapper(AuditMapper.class);

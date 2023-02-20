@@ -1,29 +1,29 @@
 package yokiware.service;
 
 
-import yokiware.entity.User;
+import yokiware.entity.Oder;
 
 import java.io.IOException;
 import java.util.List;
 
-public interface UserService {
+public interface OderService {
 
     /**
      * 获取所有用户信息
      */
-    List<User> getAll() throws IOException;
+    List<Oder> getAll() throws IOException;
 
     /**
      * 通过Id获取用户信息
      */
-    User getById(int id);
+    Oder getById(int id);
 
     /**
      * 添加用户
      *
-     * @param user
+     * @param oder
      */
-    boolean addUser(User user);
+    boolean addUser(Oder oder);
 
     /**
      * 删除用户通过Id字段
@@ -35,8 +35,8 @@ public interface UserService {
     /**
      * 修改用户信息
      *
-     * @param user
+     * @param oder
      */
-    boolean modifyById(User user);
+    boolean modifyById(Oder oder);
 
 }

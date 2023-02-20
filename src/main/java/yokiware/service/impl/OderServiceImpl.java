@@ -2,33 +2,32 @@ package yokiware.service.impl;
 
 
 import org.apache.ibatis.session.SqlSession;
-import yokiware.entity.User;
-import yokiware.mapper.UserMapper;
-import yokiware.service.UserService;
+import yokiware.entity.Oder;
+import yokiware.mapper.OderMapper;
+import yokiware.service.OderService;
 import yokiware.util.SqlSessionUtils;
 
 import java.io.IOException;
 import java.util.List;
 
-public class UserServiceImpl implements UserService {
-
+public class OderServiceImpl implements OderService {
     //获取UserMapper接口的代理对象
     SqlSession sqlSession = SqlSessionUtils.getCurrentSqlSession();
-    UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+    OderMapper oderMapper = sqlSession.getMapper(OderMapper.class);
 
     @Override
-    public List<User> getAll() throws IOException {
-        return userMapper.findAll();
+    public List<Oder> getAll() throws IOException {
+        return oderMapper.findAll();
     }
 
     @Override
-    public User getById(int id) {
-        return userMapper.getById(id);
+    public Oder getById(int id) {
+        return oderMapper.getById(id);
     }
 
     @Override
-    public boolean addUser(User user) {
-        if (userMapper.addUser(user)) {
+    public boolean addUser(Oder oder) {
+        if (oderMapper.addUser(oder)) {
             sqlSession.commit();
             return true;
         } else return false;
@@ -36,15 +35,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean delById(int id) {
-        if (userMapper.delById(id)) {
+        if (oderMapper.delById(id)) {
             sqlSession.commit();
             return true;
         } else return false;
     }
 
     @Override
-    public boolean modifyById(User user) {
-        if (userMapper.modifyById(user)) {
+    public boolean modifyById(Oder oder) {
+        if (oderMapper.modifyById(oder)) {
             sqlSession.commit();
             return true;
         } else return false;
