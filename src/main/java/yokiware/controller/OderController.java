@@ -38,7 +38,7 @@ public class OderController extends HttpServlet {
         if (uriParts.length == 3 || (uriParts.length == 4 && uriParts[3].isEmpty())) {
             oderList = oderService.getAll();
             if (oderList != null) {
-                JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回所有用户信息", oderList));
+                JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回所有订单信息", oderList));
             } else {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", null));
 

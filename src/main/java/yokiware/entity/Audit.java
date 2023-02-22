@@ -9,7 +9,7 @@ public class Audit {
     private int id;
     private String name;
     private String sex;
-    private String age;
+    private int age;
     private String address;
     private int power;
     private String password;

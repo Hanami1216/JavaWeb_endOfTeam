@@ -1,7 +1,6 @@
 package yokiware.controller;
 
 import com.google.gson.Gson;
-import org.apache.log4j.Logger;
 import yokiware.entity.Audit;
 import yokiware.service.AuditService;
 import yokiware.service.impl.AuditServiceImpl;
@@ -23,7 +22,7 @@ import java.util.List;
  */
 @WebServlet("/audit/*")
 public class AuditController extends HttpServlet {
-    private static final Logger logger = Logger.getLogger(AuditController.class);
+
     private final AuditService auditService = new AuditServiceImpl();
     private List<Audit> auditList;
     private Audit audit;
@@ -72,7 +71,7 @@ public class AuditController extends HttpServlet {
         BufferedReader bufferedReader = req.getReader();
         audit = new Gson().fromJson(bufferedReader, Audit.class);
         if (audit != null) {
-            auditService.addAudit(audit);
+            auditService.modifyById(audit);
             JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", null));
         } else
             JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", null));
