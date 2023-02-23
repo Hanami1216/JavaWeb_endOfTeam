@@ -20,7 +20,7 @@ import java.util.List;
  * @Author : YokiWare
  * @Date: 2023/2/5  14:12
  */
-@WebServlet("/oder/*")
+@WebServlet("/api/oder/*")
 public class OderController extends HttpServlet {
 
     private final OderService oderService = new OderServiceImpl();

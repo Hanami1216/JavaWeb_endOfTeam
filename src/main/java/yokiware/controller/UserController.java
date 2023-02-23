@@ -20,7 +20,7 @@ import java.util.List;
  * @Author : YokiWare
  * @Date: 2023/2/5  14:12
  */
-@WebServlet("/user/*")
+@WebServlet("/api/user/*")
 public class UserController extends HttpServlet {
 
     private final UserService userService = new UserServiceImpl();

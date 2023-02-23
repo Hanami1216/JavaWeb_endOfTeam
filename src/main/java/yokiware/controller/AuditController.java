@@ -20,7 +20,7 @@ import java.util.List;
  * @Author : YokiWare
  * @Date: 2023/2/5  14:12
  */
-@WebServlet("/audit/*")
+@WebServlet("/api/audit/*")
 public class AuditController extends HttpServlet {
 
     private final AuditService auditService = new AuditServiceImpl();
