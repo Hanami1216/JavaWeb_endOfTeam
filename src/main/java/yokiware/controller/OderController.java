@@ -35,7 +35,7 @@ public class OderController extends HttpServlet {
 
         // 获取所有用户信息
         List<Oder> oderList;
-        if (uriParts.length == 3 || (uriParts.length == 4 && uriParts[3].isEmpty())) {
+        if (uriParts.length == 4 || (uriParts.length == 5 && uriParts[4].isEmpty())) {
             oderList = oderService.getAll();
             if (oderList != null) {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回所有订单信息", oderList));
@@ -46,7 +46,7 @@ public class OderController extends HttpServlet {
 
         }
         // 获取单个用户信息
-        else if (uriParts.length == 4) {
+        else if (uriParts.length == 5) {
 
             int userId = Integer.parseInt(uriParts[3]);
 
