@@ -80,16 +80,22 @@
     <!-- 需要指定JDK版本哦：2.4有13,15两个JDK版本 -->
     <dependency>
       <groupId>net.sf.json-lib</groupId>
-      <artifactId>json-lib</artifactId>
-      <version>2.4</version>
-      <classifier>jdk15</classifier>
+        <artifactId>json-lib</artifactId>
+        <version>2.4</version>
+        <classifier>jdk15</classifier>
     </dependency>
-    <!--Gson-->
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.8.9</version>
-    </dependency>
+      <!--Gson-->
+      <dependency>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+          <version>2.8.9</version>
+      </dependency>
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>2.5.3</version>
+      </dependency>
+
   </dependencies>
   <properties>
     <!--编译编码-->

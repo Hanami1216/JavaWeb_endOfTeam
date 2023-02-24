@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Timestamp;
-
 /**
  * @Description :
  * @Author : YokiWare
@@ -16,11 +14,13 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 public class Oder {
 
-    int id;
-    String content;
-    Timestamp update_time;
-    String telephone_number;
-    int Payment_method;
-    int uid;
+    private int id;
+    private String content;
+    private String update_time;
+    private String telephone_number;
+    private int Payment_method;
+    private int uid;
+
+    private boolean state;
 
 }
