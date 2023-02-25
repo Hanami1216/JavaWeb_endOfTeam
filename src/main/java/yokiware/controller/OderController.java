@@ -80,9 +80,9 @@ public class OderController extends HttpServlet {
         oder = new Gson().fromJson(bufferedReader, Oder.class);
         if (oder != null) {
             oderService.modifyById(oder);
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回ture", true));
         } else
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回false", false));
         oder = null;
     }
 

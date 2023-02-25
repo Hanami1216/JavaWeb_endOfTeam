@@ -7,7 +7,7 @@
     </insert>
     <update id="modifyById">
         update
-        user
+        oder
         <set>
             <if test="content!= null and content != ''">
                 content =#{content},
