@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="url路径更改，oder的Servlet中GET方法修改">
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="oder添加字段，state表示状态">
+      <change afterPath="$PROJECT_DIR$/src/main/java/yokiware/vo/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/entity/Oder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/entity/Oder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/OderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/OderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/AuditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/AuditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/LoginController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +230,8 @@
       <workItem from="1676949401633" duration="725000" />
       <workItem from="1677031000234" duration="9744000" />
       <workItem from="1677115161086" duration="6916000" />
-      <workItem from="1677220866542" duration="6240000" />
+      <workItem from="1677220866542" duration="7087000" />
+      <workItem from="1677293762789" duration="1692000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -400,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677229409565</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="oder添加字段，state表示状态">
+      <created>1677245152166</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1677245152166</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +448,8 @@
     <MESSAGE value="完善controller接口问题" />
     <MESSAGE value="url路径更改，添加loginController实现登录功能" />
     <MESSAGE value="url路径更改，oder的Servlet中GET方法修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="url路径更改，oder的Servlet中GET方法修改" />
+    <MESSAGE value="oder添加字段，state表示状态" />
+    <option name="LAST_COMMIT_MESSAGE" value="oder添加字段，state表示状态" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

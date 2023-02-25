@@ -55,7 +55,7 @@ public class AuditController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         BufferedReader bufferedReader = req.getReader();
         audit = new Gson().fromJson(bufferedReader, Audit.class);
         if (audit != null) {
@@ -67,7 +67,7 @@ public class AuditController extends HttpServlet {
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         BufferedReader bufferedReader = req.getReader();
         audit = new Gson().fromJson(bufferedReader, Audit.class);
         if (audit != null) {
