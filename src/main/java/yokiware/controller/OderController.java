@@ -63,14 +63,15 @@ public class OderController extends HttpServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         BufferedReader bufferedReader = req.getReader();
         oder = new Gson().fromJson(bufferedReader, Oder.class);
         if (oder != null) {
-            oderService.addUser(oder);
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "ADD成功,返回null", null));
+            oderService.addOder(oder);
+            log(String.valueOf(oder));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "ADD成功,返回null", true));
         } else
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "ADD失败，返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "ADD失败，返回null", false));
         oder = null;
     }
 

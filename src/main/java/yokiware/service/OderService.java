@@ -23,7 +23,7 @@ public interface OderService {
      *
      * @param oder
      */
-    boolean addUser(Oder oder);
+    boolean addOder(Oder oder);
 
     /**
      * 删除用户通过Id字段

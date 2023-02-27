@@ -18,7 +18,7 @@ public class Oder {
     private String content;
     private String update_time;
     private String telephone_number;
-    private int Payment_method;
+    private int payment_method;
     private int uid;
 
     private boolean state;

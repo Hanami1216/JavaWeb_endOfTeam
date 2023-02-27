@@ -26,8 +26,8 @@ public class OderServiceImpl implements OderService {
     }
 
     @Override
-    public boolean addUser(Oder oder) {
-        if (oderMapper.addUser(oder)) {
+    public boolean addOder(Oder oder) {
+        if (oderMapper.addOder(oder)) {
             sqlSession.commit();
             return true;
         } else return false;
