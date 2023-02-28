@@ -18,8 +18,8 @@
             <if test="telephone_number!= null and telephone_number != ''">
                 telephone_number =#{telephone_number},
             </if>
-            <if test="Payment_method!= null and Payment_method != ''">
-                Payment_method =#{Payment_method},
+            <if test="payment_method!= null and payment_method != ''">
+                payment_method =#{payment_method},
             </if>
             <if test="uid!= null and uid != ''">
                 uid =#{uid},

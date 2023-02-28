@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="订单返回数据类型更改">
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/OderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/OderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/mapper/OderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/mapper/OderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/OderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/OderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/OderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/service/impl/OderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/OderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/OderMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +232,8 @@
       <workItem from="1677220866542" duration="7087000" />
       <workItem from="1677293762789" duration="4887000" />
       <workItem from="1677395143292" duration="766000" />
-      <workItem from="1677468226060" duration="4303000" />
+      <workItem from="1677468226060" duration="5279000" />
+      <workItem from="1677552293267" duration="2159000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -426,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677311874021</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名">
+      <created>1677490960029</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1677490960029</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +474,8 @@
     <MESSAGE value="oder添加字段，state表示状态" />
     <MESSAGE value="添加vo包对前端业务进行解析，返回Login表示登录状态与权限" />
     <MESSAGE value="订单返回数据类型更改" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单返回数据类型更改" />
+    <MESSAGE value="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名" />
+    <option name="LAST_COMMIT_MESSAGE" value="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
