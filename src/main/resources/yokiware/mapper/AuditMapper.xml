@@ -27,6 +27,9 @@
             <if test="password!= null and password != ''">
                 password =#{password},
             </if>
+            <if test="state!= null and state != ''">
+                state =#{state},
+            </if>
         </set>
         where id =#{id}
     </update>

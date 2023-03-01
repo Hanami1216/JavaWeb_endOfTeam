@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名">
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="mapper映射文件更新功能参数名称bug修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/OderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/OderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/OderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/yokiware/mapper/OderMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/AuditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/AuditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/entity/Audit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/entity/Audit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -233,7 +233,8 @@
       <workItem from="1677293762789" duration="4887000" />
       <workItem from="1677395143292" duration="766000" />
       <workItem from="1677468226060" duration="5279000" />
-      <workItem from="1677552293267" duration="2159000" />
+      <workItem from="1677552293267" duration="2829000" />
+      <workItem from="1677634627101" duration="1986000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -431,7 +432,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677490960029</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="mapper映射文件更新功能参数名称bug修改">
+      <created>1677594678383</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1677594678383</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +458,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="项目框架" />
     <MESSAGE value="servlet框架导入" />
     <MESSAGE value="mybatis框架整合" />
     <MESSAGE value="mybatis工具类完成，用户接口getAll()方法完成" />
@@ -475,7 +482,8 @@
     <MESSAGE value="添加vo包对前端业务进行解析，返回Login表示登录状态与权限" />
     <MESSAGE value="订单返回数据类型更改" />
     <MESSAGE value="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名" />
-    <option name="LAST_COMMIT_MESSAGE" value="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名" />
+    <MESSAGE value="mapper映射文件更新功能参数名称bug修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="mapper映射文件更新功能参数名称bug修改" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

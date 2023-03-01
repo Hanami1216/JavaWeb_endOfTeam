@@ -32,7 +32,7 @@ public class AuditController extends HttpServlet {
         String requestURI = req.getRequestURI();
         String[] uriParts = requestURI.split("/");
         // 获取所有用户信息
-        if (uriParts.length == 3 || (uriParts.length == 4 && uriParts[3].isEmpty())) {
+        if (uriParts.length == 4 || (uriParts.length == 5 && uriParts[4].isEmpty())) {
             auditList = auditService.getAll();
             if (auditList != null) {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回所有用户信息", auditList));
@@ -40,7 +40,7 @@ public class AuditController extends HttpServlet {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", null));
         }
         // 获取单个用户信息
-        else if (uriParts.length == 4) {
+        else if (uriParts.length == 5) {
 
             int userId = Integer.parseInt(uriParts[3]);
 
@@ -60,9 +60,9 @@ public class AuditController extends HttpServlet {
         audit = new Gson().fromJson(bufferedReader, Audit.class);
         if (audit != null) {
             auditService.addAudit(audit);
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "ADD成功,返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "ADD成功,返回null", true));
         } else
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "ADD失败，返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "ADD失败，返回null", false));
         audit = null;
     }
 
@@ -72,17 +72,17 @@ public class AuditController extends HttpServlet {
         audit = new Gson().fromJson(bufferedReader, Audit.class);
         if (audit != null) {
             auditService.modifyById(audit);
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", true));
         } else
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", false));
         audit = null;
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (auditService.delById(Integer.parseInt(req.getParameter("id")))) {
-            JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_OK, "DELETE成功", null));
-        } else JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_ERR, "DELETE失败", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_OK, "DELETE成功", true));
+        } else JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_ERR, "DELETE失败", false));
 
     }
 }
