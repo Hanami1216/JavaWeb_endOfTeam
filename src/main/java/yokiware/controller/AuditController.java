@@ -2,8 +2,11 @@ package yokiware.controller;
 
 import com.google.gson.Gson;
 import yokiware.entity.Audit;
+import yokiware.entity.User;
 import yokiware.service.AuditService;
+import yokiware.service.UserService;
 import yokiware.service.impl.AuditServiceImpl;
+import yokiware.service.impl.UserServiceImpl;
 import yokiware.util.JSONUtil;
 
 import javax.servlet.ServletException;
@@ -71,8 +74,12 @@ public class AuditController extends HttpServlet {
         BufferedReader bufferedReader = req.getReader();
         audit = new Gson().fromJson(bufferedReader, Audit.class);
         if (audit != null) {
-            auditService.modifyById(audit);
-            JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", true));
+            if (auditService.modifyById(audit)) {
+                UserService userService = new UserServiceImpl();
+                if (userService.addUser(new User(audit.getId(), audit.getName(), audit.getSex(), audit.getAge(), audit.getAddress(), audit.getPower(), audit.getPassword()))) {
+                    JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_OK, "UPDATE成功,返回null", true));
+                } else JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", false));
+            } else JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", false));
         } else
             JSONUtil.responseOutWithJson(resp, new Result(Code.UPDATE_ERR, "UPDATE失败，返回null", false));
         audit = null;
