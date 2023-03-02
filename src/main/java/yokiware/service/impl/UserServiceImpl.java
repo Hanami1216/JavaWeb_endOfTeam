@@ -30,6 +30,7 @@ public class UserServiceImpl implements UserService {
     public boolean addUser(User user) {
         if (userMapper.addUser(user)) {
             sqlSession.commit();
+            sqlSession.clearCache(); // 清空缓存
             return true;
         } else return false;
     }
@@ -46,6 +47,7 @@ public class UserServiceImpl implements UserService {
     public boolean modifyById(User user) {
         if (userMapper.modifyById(user)) {
             sqlSession.commit();
+            sqlSession.clearCache(); // 清空缓存
             return true;
         } else return false;
     }

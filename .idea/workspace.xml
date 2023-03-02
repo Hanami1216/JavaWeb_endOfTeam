@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="AuditMapper.xml映射文件更新,增加    &lt;update id=&quot;modifyById&quot;&gt;&#10;用户状态更新字段的功能">
+    <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="日志级别修改">
+      <change afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserServiceTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +115,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTest.UserGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaWeb_endOfTeam" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="UserTest" />
+      <option name="METHOD_NAME" value="UserGet" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JavaWeb_endOfTeam [tomcat7:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -141,11 +151,13 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="JUnit.UserTest.UserGet" />
       <item itemvalue="Maven.JavaWeb_endOfTeam [tomcat7:run]" />
       <item itemvalue="应用程序.JSONTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTest.UserGet" />
         <item itemvalue="应用程序.JSONTest" />
       </list>
     </recent_temporary>
@@ -207,6 +219,7 @@
       <workItem from="1677552293267" duration="2829000" />
       <workItem from="1677634627101" duration="4894000" />
       <workItem from="1677668007804" duration="2753000" />
+      <workItem from="1677725032233" duration="5578000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
@@ -418,7 +431,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677640843188</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="日志级别修改">
+      <created>1677725431033</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1677725431033</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +457,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="mybatis框架整合" />
     <MESSAGE value="mybatis工具类完成，用户接口getAll()方法完成" />
     <MESSAGE value="项目配置导入git仓库" />
     <MESSAGE value="JSONObject导入" />
@@ -462,7 +481,8 @@
     <MESSAGE value="订单支付方式bug修正，重新更改了数据库字段名与框架中的支付方式类型名" />
     <MESSAGE value="mapper映射文件更新功能参数名称bug修改" />
     <MESSAGE value="AuditMapper.xml映射文件更新,增加    &lt;update id=&quot;modifyById&quot;&gt;&#10;用户状态更新字段的功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="AuditMapper.xml映射文件更新,增加    &lt;update id=&quot;modifyById&quot;&gt;&#10;用户状态更新字段的功能" />
+    <MESSAGE value="日志级别修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="日志级别修改" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

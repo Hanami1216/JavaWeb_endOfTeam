@@ -41,7 +41,7 @@ public class UserController extends HttpServlet {
             if (userList != null) {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回所有用户信息", userList));
             } else {
-                JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", null));
+                JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", false));
 
             }
 
@@ -55,16 +55,15 @@ public class UserController extends HttpServlet {
             if (user != null) {
                 JSONUtil.responseOutWithJson(resp, new Result(Code.GET_OK, "GET成功,返回单个用户信息", user));
             } else {
-                JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", null));
+                JSONUtil.responseOutWithJson(resp, new Result(Code.GET_ERR, "GET失败，返回null", false));
             }
         }
         // 恢复null
         user = null;
-        userList = null;
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         BufferedReader bufferedReader = req.getReader();
         user = new Gson().fromJson(bufferedReader, User.class);
         if (user != null) {
@@ -88,10 +87,11 @@ public class UserController extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
+        log(req.getParameter("id"));
         if (userService.delById(Integer.parseInt(req.getParameter("id")))) {
-            JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_OK, "DELETE成功", null));
-        } else JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_ERR, "DELETE失败", null));
+            JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_OK, "DELETE成功", true));
+        } else JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_ERR, "DELETE失败", false));
     }
 
 }
