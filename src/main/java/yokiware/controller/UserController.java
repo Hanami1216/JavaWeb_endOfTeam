@@ -23,13 +23,12 @@ import java.util.List;
 @WebServlet("/api/user/*")
 public class UserController extends HttpServlet {
 
-    private final UserService userService = new UserServiceImpl();
+    private UserService userService;
     private User user;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-
+        userService = new UserServiceImpl();
         String requestURI = req.getRequestURI();
         String[] uriParts = requestURI.split("/");
 
@@ -64,6 +63,7 @@ public class UserController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        userService = new UserServiceImpl();
         BufferedReader bufferedReader = req.getReader();
         user = new Gson().fromJson(bufferedReader, User.class);
         if (user != null) {
@@ -76,6 +76,7 @@ public class UserController extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        userService = new UserServiceImpl();
         BufferedReader bufferedReader = req.getReader();
         user = new Gson().fromJson(bufferedReader, User.class);
         if (user != null) {
@@ -88,7 +89,7 @@ public class UserController extends HttpServlet {
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
-        log(req.getParameter("id"));
+        userService = new UserServiceImpl();
         if (userService.delById(Integer.parseInt(req.getParameter("id")))) {
             JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_OK, "DELETE成功", true));
         } else JSONUtil.responseOutWithJson(resp, new Result(Code.DELETE_ERR, "DELETE失败", false));
