@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="85e7587c-dfab-4304-a897-c14ef3a51369" name="变更" comment="日志级别修改">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/yokiware/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +218,7 @@
       <workItem from="1677634627101" duration="4894000" />
       <workItem from="1677668007804" duration="2753000" />
       <workItem from="1677725032233" duration="5578000" />
+      <workItem from="1677747132032" duration="671000" />
     </task>
     <task id="LOCAL-00001" summary="项目框架">
       <created>1672151373653</created>
