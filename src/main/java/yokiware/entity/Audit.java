@@ -13,5 +13,5 @@ public class Audit {
     private String address;
     private int power;
     private String password;
-    private boolean state;
+    private int state;
 }
